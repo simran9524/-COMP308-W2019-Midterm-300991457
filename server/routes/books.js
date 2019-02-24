@@ -20,7 +20,6 @@ router.get('/', (req, res, next) => {
       });
     }
   });
-
 });
 
 //  GET the Book Details page in order to add a new Book
@@ -29,7 +28,6 @@ router.get('/add', (req, res, next) => {
     title: "Add my book",
     books: ""
   });
-
 });
 
 // POST process the Book Details page and create a new Book - CREATE
@@ -98,8 +96,17 @@ router.post('/:id', (req, res, next) => {
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
 
-    
-  
+  let bookId = req.params.id;
+
+  book.remove({_id: bookId}, (err) => {
+    if(err){
+      console.log(err);
+      res.end(err);
+    }else{
+      res.redirect('/books');
+    }
+  });
+
 });
 
 
