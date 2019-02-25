@@ -1,3 +1,9 @@
+/*
+  file name: server.js
+  author: simran
+  student id: 300991457
+  web app name: favourite book list : comp308-w2019-midterm-300991457
+*/
 let app = require('./server/app');
 let debug = require('debug')('comp308-w2019-midterm:server');
 let http = require('http');

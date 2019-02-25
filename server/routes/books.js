@@ -1,3 +1,9 @@
+/*
+  file name: book.js
+  author: simran
+  student id: 300991457
+  web app name: favourite book list : comp308-w2019-midterm-300991457
+*/
 // modules required for routing
 let express = require('express');
 let router = express.Router();
